@@ -37,4 +37,4 @@ class TestLogin():
         assert "inventory.html" in driver.current_url
         inventory = driver.find_element(By.CLASS_NAME, "inventory_list")
         assert inventory.is_displayed()
-
+     # test av commit

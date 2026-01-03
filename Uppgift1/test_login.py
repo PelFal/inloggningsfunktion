@@ -1,4 +1,4 @@
-import time
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -17,7 +17,7 @@ class TestLogin():
     def test_positive_login(self, driver):
         # Go to webpage
         driver.get("https://www.saucedemo.com")
-        time.sleep(2)
+
 
         # Type username student into Username field
         username_locator = driver.find_element(By.ID, "user-name")
@@ -37,4 +37,4 @@ class TestLogin():
         assert "inventory.html" in driver.current_url
         inventory = driver.find_element(By.CLASS_NAME, "inventory_list")
         assert inventory.is_displayed()
-     # test av commit
+

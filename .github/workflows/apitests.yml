@@ -2,28 +2,20 @@ name: API Integration Tests
 
 on:
   push:
-    bransches:
-      - main
+    paths:
+      - "tests/test_api_integration.py"
+      - ".github/workflows/apitests.yml"
 
 jobs:
-  test:
+  api_test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.13
 
-      - name: Install dependencies
-        run:
-          pip install --upgrade pip
-          pip install --pytest requests
-
-      - name: Run tests
-        run:
-          pytest -v
+      - run: pip install --pytest requests
+      - run: pytest tests/test_api_integrations.py -v
 

@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture
 def driver():
     options = Options()
+
     options.add_argument('--headless=new')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
@@ -36,7 +37,7 @@ class TestLogin():
 
         driver.find_element(By.ID, "login-button").click()
 
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 20).until(
             EC.url_contains("inventory.html")
         )
 

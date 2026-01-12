@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install --pytest requests
+          pip install pytest requests
       - name: Run tests
         run:  pytest tests/test_api_integrations.py -v
 

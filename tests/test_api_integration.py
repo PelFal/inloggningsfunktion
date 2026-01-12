@@ -1,5 +1,6 @@
 import requests
 
+
 BASE_URL = "https://fakestoreapi.com"
 
 def test_api_can_be_called():

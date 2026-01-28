@@ -71,4 +71,3 @@ class TestLogin():
         assert "Epic sadface" in error_message_locator.text
         print("Felmeddelande: ", error_message_locator.text)
 
-# testar igen

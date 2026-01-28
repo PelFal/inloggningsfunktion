@@ -44,7 +44,7 @@ class TestLogin():
         # Verify new page has url https://www.saucedemo.com/inventory.html
         assert "inventory.html" in driver.current_url
         inventory = driver.find_element(By.CLASS_NAME, "inventory_list")
-        assert inventory.is_displayed()
+        assert inventory.is_displayed(), "Inventory list not visible after login"
 
     def test_negative_login_username(self, driver):
         driver.get("https://www.saucedemo.com")

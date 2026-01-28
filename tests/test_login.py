@@ -69,5 +69,6 @@ class TestLogin():
         error_message_locator = driver.find_element(By.CSS_SELECTOR, '[data-test="error"]')
         assert error_message_locator.is_displayed()
         assert "Epic sadface" in error_message_locator.text
-        print("Felmeddelande: ", error_message_locator.text
+        print("Felmeddelande: "), error_message_locator.text
 
+#varför???

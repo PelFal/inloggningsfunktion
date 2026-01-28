@@ -2,9 +2,6 @@ name: API Integration Tests
 
 on:
   push:
-    paths:
-      - "tests/test_api_integration.py"
-      - ".github/workflows/apitests.yml"
 
 jobs:
   api_test:
